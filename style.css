@@ -1,0 +1,183 @@
+
+/* Reset tampilan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tampilan halaman */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef1f5;
+    color: #333333;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+/* Kotak utama CV */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul CV */
+.header {
+    text-align: center;
+    border-bottom: 3px solid #243b55;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #243b55;
+    letter-spacing: 2px;
+}
+
+/* Profil: foto di kiri, informasi di kanan */
+.profil {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 30px;
+}
+
+/* Ukuran foto */
+.foto {
+    width: 160px;
+    height: 180px;
+    flex-shrink: 0;
+    border: 3px solid #243b55;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e5eaf0;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Informasi nama dan deskripsi */
+.identitas {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 15px 10px 0;
+}
+
+.identitas h2 {
+    font-size: 25px;
+    color: #243b55;
+    margin-bottom: 15px;
+}
+
+.identitas p {
+    text-align: justify;
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* Susunan empat kotak */
+.grid-cv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Desain setiap kotak */
+.card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #d5dce5;
+    border-left: 5px solid #243b55;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+.card h3 {
+    color: #243b55;
+    font-size: 19px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.card h4 {
+    color: #34495e;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 7px;
+}
+
+.card p {
+    margin-bottom: 7px;
+}
+
+.riwayat {
+    margin-bottom: 15px;
+}
+
+/* Bagian bawah */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #dddddd;
+    color: #777777;
+    font-size: 13px;
+}
+
+/* Tampilan HP */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .profil {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .foto {
+        width: 130px;
+        height: 150px;
+    }
+
+    .identitas h2 {
+        font-size: 21px;
+    }
+
+    .grid-cv {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
